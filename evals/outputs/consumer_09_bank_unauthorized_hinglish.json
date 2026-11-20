@@ -1,0 +1,77 @@
+{
+  "test_id": "consumer_09_bank_unauthorized_hinglish",
+  "domain": "consumer",
+  "language": "Hinglish",
+  "input_type": "clean",
+  "query": "Bank ne galat charge deduct kar liya 4500 rupees aur bol rahe hain system error hai par reverse nahi kar rahe 2 mahine se.",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "CPA_2019_SEC_2_10",
+    "CPA_2019_SEC_2_11",
+    "CPA_2019_SEC_2_46",
+    "CPA_2019_SEC_2_7"
+  ],
+  "execution_time_sec": 4.725,
+  "model_output": {
+    "summary": "Aapke bank account se 4,500 rupees galat tarike se deduct kar liye gaye hain aur bank ise 2 mahine se reverse nahi kar raha hai, jise consumer law ke tahat banking services mein 'deficiency in service' mana ja sakta hai.",
+    "facts_extracted": [
+      "Bank ne 4500 rupees galat charge ke roop mein deduct kiye hain",
+      "Bank ise system error bata raha hai par 2 mahine se paise wapas nahi kiye",
+      "Dispute ki amount 50 lakh rupees se kam hai"
+    ],
+    "options": [
+      {
+        "title": "Bank ke Nodal Officer / Grievance Cell mein Shikayat karein",
+        "description": "Sabse pehle bank ke branch manager ya official customer grievance portal par written complaint darj karein ki system error ke chalte aapke paise galat kate hain.",
+        "pros": [
+          "Jaldi sunwayi ho sakti hai",
+          "Court jaane ki zaroorat nahi padti"
+        ],
+        "cons": [
+          "Agar bank na mane toh waqt lag sakta hai"
+        ],
+        "estimated_timeframe": "7 se 15 din",
+        "forum": "Bank Grievance Redressal Cell"
+      },
+      {
+        "title": "Banking Ombudsman ya Consumer Forum mein Shikayat",
+        "description": "Agar bank 2 mahine se solution nahi de raha hai, toh aap Consumer Protection Act ke tahat District Consumer Commission mein deficiency in service ke liye shikayat darj kar sakte hain.",
+        "pros": [
+          "Kanooni taur par paise wapas aur compensation milne ka rasta",
+          "Consumer rights ki protection"
+        ],
+        "cons": [
+          "Thoda samay lag sakta hai"
+        ],
+        "estimated_timeframe": "1 se 3 mahine",
+        "forum": "District Consumer Commission"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "CPA_2019_SEC_2_7",
+        "provision_name": "Consumer Protection Act, 2019 - Section 2(7)",
+        "relevance": "Aap bank ki services 'avail' kar rahe hain, isliye aap is Act ke tahat ek 'Consumer' hain."
+      },
+      {
+        "corpus_id": "CPA_2019_SEC_2_11",
+        "provision_name": "Consumer Protection Act, 2019 - Section 2(11)",
+        "relevance": "Bank dwara galat charge kaatna aur 2 mahine tak reverse na karna banking service mein 'deficiency' (kami) kahlata hai."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Kya aapne bank ko koi written written email ya complaint di hai is matter par?",
+      "Bank ka official written response kya hai?"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

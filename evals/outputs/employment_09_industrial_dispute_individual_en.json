@@ -1,0 +1,57 @@
+{
+  "test_id": "employment_09_industrial_dispute_individual_en",
+  "domain": "employment",
+  "language": "English",
+  "input_type": "clean",
+  "query": "Can I approach the labour conciliation officer directly for my wrongful termination without needing a trade union?",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "ICA_1872_SEC_27",
+    "IDA_1947_SEC_2A",
+    "PWA_1936_SEC_15",
+    "PWA_1936_SEC_5"
+  ],
+  "execution_time_sec": 2.378,
+  "model_output": {
+    "summary": "Yes, you can approach the Labour Conciliation Officer directly for your wrongful termination without needing a trade union. Under Section 2A of the Industrial Disputes Act, 1947, the dismissal, discharge, or termination of an individual worker is deemed an industrial dispute, allowing you to file a case on your own.",
+    "facts_extracted": [
+      "User is facing wrongful termination",
+      "User wants to know if a trade union is required to approach the labour conciliation officer"
+    ],
+    "options": [
+      {
+        "title": "Approach Conciliation Officer Directly",
+        "description": "File an application regarding your wrongful termination directly before the Labour Conciliation Officer without requiring union sponsorship.",
+        "pros": [
+          "You do not need a trade union to represent you",
+          "Provides a platform for mediated settlement"
+        ],
+        "cons": [
+          "Conciliation relies on voluntary agreement and may not always result in a settlement"
+        ],
+        "estimated_timeframe": "1 to 3 months",
+        "forum": "Office of the Labour Commissioner / Conciliation Officer"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "IDA_1947_SEC_2A",
+        "provision_name": "Industrial Disputes Act, 1947, Section 2A",
+        "relevance": "Allows an individual workman to treat their termination as an industrial dispute and approach the Conciliation Officer directly without needing a trade union."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Details on whether there are pending wage dues or other contractual disputes"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

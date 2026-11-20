@@ -1,0 +1,78 @@
+{
+  "test_id": "employment_03_non_compete_threat_en",
+  "domain": "employment",
+  "language": "English",
+  "input_type": "clean",
+  "query": "My former software employer is threatening legal action claiming I cannot join another IT firm due to a 2-year non-compete clause in my offer letter.",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "ICA_1872_SEC_27",
+    "ICA_1872_SEC_74",
+    "LSAA_1987_SEC_12",
+    "PWA_1936_SEC_3"
+  ],
+  "execution_time_sec": 6.205,
+  "model_output": {
+    "summary": "Your former employer is threatening legal action over a 2-year non-compete clause in your offer letter. In India, agreements that stop someone from doing a lawful job or business are generally void and unenforceable.",
+    "facts_extracted": [
+      "Former employer is a software firm",
+      "Employer is threatening legal action",
+      "Threat is based on a 2-year non-compete clause in the offer letter",
+      "You intend to join another IT firm"
+    ],
+    "options": [
+      {
+        "title": "Consult District Legal Services Authority (DLSA)",
+        "description": "Reach out to your local DLSA or call the NALSA Helpline 15100 to check if you qualify for free legal advice or representation.",
+        "pros": [
+          "Free or low-cost guidance",
+          "Expert help from legal professionals"
+        ],
+        "cons": [
+          "May have eligibility criteria based on income or employment status"
+        ],
+        "estimated_timeframe": "1 to 3 days",
+        "forum": "District Legal Services Authority (DLSA)"
+      },
+      {
+        "title": "Respond through an Advocate",
+        "description": "Have an advocate reply to your former employer pointing out that post-employment non-compete clauses are void under Indian law.",
+        "pros": [
+          "Shows seriousness",
+          "Protects your legal rights"
+        ],
+        "cons": [
+          "Involves hiring costs"
+        ],
+        "estimated_timeframe": "3 to 7 days",
+        "forum": null
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "ICA_1872_SEC_27",
+        "provision_name": "Indian Contract Act, 1872 Section 27",
+        "relevance": "Applies to post-employment non-compete clauses, stating that agreements restraining someone from exercising a lawful profession are generally void."
+      },
+      {
+        "corpus_id": "LSAA_1987_SEC_12",
+        "provision_name": "Legal Services Authorities Act, 1987 Section 12",
+        "relevance": "Outlines eligibility criteria for receiving free legal services and advice from the DLSA or NALSA."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": true,
+    "lawyer_reason": "Since your former employer is threatening legal action, it is important to have an advocate respond properly and protect you against any court summons.",
+    "missing_info": [
+      "Whether any formal legal notice or court summons has already been delivered to you",
+      "Whether you received any special compensation or training during your employment tied to the clause"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

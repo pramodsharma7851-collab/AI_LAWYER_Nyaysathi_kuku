@@ -1,0 +1,77 @@
+{
+  "test_id": "consumer_06_noisy_voice_phone",
+  "domain": "consumer",
+  "language": "English",
+  "input_type": "noisy_voice",
+  "query": "uh mobile phone battery swollen in one week shopkeeper shouting at me not replacing uh 12000 rupees gone",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "CPA_2019_SEC_34",
+    "CRIMINAL_REFORM_NOTE_BNS",
+    "ICA_1872_SEC_74",
+    "LSAA_1987_SEC_19"
+  ],
+  "execution_time_sec": 10.573,
+  "model_output": {
+    "summary": "You bought a mobile phone for Rs. 12,000 and its battery swelled up within one week. The shopkeeper is refusing to replace it and shouting at you. Because your dispute amount is Rs. 12,000 (which is under 50 Lakhs), you can file a complaint at the District Consumer Commission under the Consumer Protection Act.",
+    "facts_extracted": [
+      "Mobile phone battery swelled within one week of purchase",
+      "Cost of the phone is Rs. 12,000",
+      "Shopkeeper refused replacement and shouted at the buyer"
+    ],
+    "options": [
+      {
+        "title": "File Consumer Complaint",
+        "description": "File a formal complaint at the District Consumer Commission since the value of the goods is Rs. 12,000, which is well below the Rs. 50 Lakhs limit.",
+        "pros": [
+          "Involves formal consumer protection rights",
+          "Can seek replacement or refund for defective goods"
+        ],
+        "cons": [
+          "Takes time and requires proper documentation like purchase bills"
+        ],
+        "estimated_timeframe": "A few weeks to months",
+        "forum": "District Consumer Commission"
+      },
+      {
+        "title": "Approach District Legal Services Authority",
+        "description": "Seek help from the District Legal Services Authority to resolve the pre-litigation dispute or refer it to a Lok Adalat.",
+        "pros": [
+          "Zero court fees",
+          "Helps reach a quick compromise or settlement"
+        ],
+        "cons": [
+          "Depends on the willingness of the shopkeeper to settle"
+        ],
+        "estimated_timeframe": "1 to 4 weeks",
+        "forum": "District Legal Services Authority / Lok Adalat"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "CPA_2019_SEC_34",
+        "provision_name": "Consumer Protection Act, 2019, Section 34",
+        "relevance": "Grants jurisdiction to the District Consumer Commission for complaints where the value of goods does not exceed Rs. 50 Lakhs, fitting your Rs. 12,000 phone purchase."
+      },
+      {
+        "corpus_id": "LSAA_1987_SEC_19",
+        "provision_name": "Legal Services Authorities Act, 1987, Section 19",
+        "relevance": "Provides for organizing Lok Adalats to help settle pre-litigation disputes amicably."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Do you have the original purchase bill or invoice for the phone?",
+      "Did you contact the authorized service center of the mobile brand?"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

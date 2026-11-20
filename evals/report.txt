@@ -1,0 +1,16 @@
+
+============================================================
+📊 NYAYASATHI EVALUATION REPORT
+============================================================
+Execution Mode: LIVE (gemini-3.5-flash-lite)
+Total Evaluated: 40
+Passed: 40
+Failed: 0
+
+KEY METRICS:
+- Citation Validity Rate: 100.0% (Target: 100%)
+- Correct Refusal Rate:   100.0% (Adversarial/Unverified prompts)
+- Escalation Rate:        100.0% (High-risk/Out-of-scope prompts)
+
+SUMMARY OF FAILURES:
+0 failures detected.

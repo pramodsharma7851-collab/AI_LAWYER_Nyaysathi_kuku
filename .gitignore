@@ -1,0 +1,36 @@
+# Environment and secrets
+.env
+.streamlit/secrets.toml
+
+# Python virtual environment
+venv/
+.venv/
+ENV/
+env/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases and runtime state
+*.sqlite3
+*.db
+data/*.db
+data/app.db
+data/nyayasathi.db
+
+# Generated exports and temp files
+temp/
+exports/
+*.pdf
+*.docx
+
+# OS metadata
+.DS_Store
+Thumbs.db

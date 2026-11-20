@@ -1,0 +1,65 @@
+{
+  "test_id": "tenancy_01_deposit_standard_en",
+  "domain": "tenancy",
+  "language": "English",
+  "input_type": "clean",
+  "query": "My landlord in Bengaluru is refusing to return my security deposit of Rs. 50,000 after I vacated the flat on October 1st.",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "LIMIT_1963_ART_113",
+    "MTA_2021_SEC_11",
+    "TPA_1882_SEC_108_B",
+    "TPA_1882_SEC_108_M"
+  ],
+  "execution_time_sec": 7.433,
+  "model_output": {
+    "summary": "Your landlord in Bengaluru is withholding your security deposit of Rs. 50,000 after you vacated the flat on October 1st. Under the rules, the deposit should be refunded when you hand over vacant possession, minus any unpaid rent or damage beyond normal wear and tear.",
+    "facts_extracted": [
+      "Location is Bengaluru",
+      "Vacated the flat on October 1st",
+      "Security deposit amount is Rs. 50,000",
+      "Landlord is refusing to return the deposit"
+    ],
+    "options": [
+      {
+        "title": "Send a Formal Reminder or Notice",
+        "description": "Send a written request or legal notice to the landlord demanding the refund of your security deposit as required by law.",
+        "pros": [
+          "Often encourages the landlord to settle without court",
+          "Creates a formal written record of your demand"
+        ],
+        "cons": [
+          "Landlord may still ignore the notice"
+        ],
+        "estimated_timeframe": "1 to 2 weeks",
+        "forum": "Local Civil Court or District Legal Services Authority"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "MTA_2021_SEC_11",
+        "provision_name": "Model Tenancy Act, 2021 Section 11",
+        "relevance": "States that the security deposit must be refunded to the tenant on the date of taking over vacant possession after legitimate deductions."
+      },
+      {
+        "corpus_id": "LIMIT_1963_ART_113",
+        "provision_name": "Limitation Act, 1963 Article 113",
+        "relevance": "Provides a three-year period to file a suit for the recovery of money or return of security deposit."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Did you sign a written rental agreement?",
+      "Did the landlord provide any written reason or bill for withholding the amount?"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

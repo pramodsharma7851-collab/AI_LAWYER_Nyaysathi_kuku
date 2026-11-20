@@ -1,0 +1,64 @@
+{
+  "test_id": "consumer_02_refund_denial_hi",
+  "domain": "consumer",
+  "language": "Hindi (हिन्दी)",
+  "input_type": "clean",
+  "query": "मैंने ऑनलाइन जूते मंगाए थे जो फटे हुए निकले। कंपनी रिटर्न और रिफंड दोनों से मना कर रही है।",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "CPA_2019_SEC_2_10",
+    "CPA_2019_SEC_2_11",
+    "CPA_2019_SEC_2_46",
+    "CPA_2019_SEC_2_7"
+  ],
+  "execution_time_sec": 3.833,
+  "model_output": {
+    "summary": "आपने ऑनलाइन जूते खरीदे थे जो खराब या फटे हुए निकले। कंपनी अब रिटर्न या रिफंड देने से मना कर रही है। कानून के अनुसार, आप एक उपभोक्ता हैं और आपको खराब सामान के खिलाफ आवाज उठाने का अधिकार है।",
+    "facts_extracted": [
+      "ऑनलाइन जूते खरीदे गए",
+      "जूते फटे हुए (खराब) निकले",
+      "कंपनी ने रिटर्न और रिफंड देने से मना कर दिया"
+    ],
+    "options": [
+      {
+        "title": "उपभोक्ता फोरम (Consumer Forum) में शिकायत",
+        "description": "आप नेशनल कंज्यूमर हेल्पलाइन (NCH) पर शिकायत दर्ज कर सकते हैं या कंज्यूमर कमीशन में जा सकते हैं क्योंकि सामान में कमी (defect) है।",
+        "pros": [
+          "आपको रिफंड या हर्जाना मिल सकता है",
+          "कंपनी की मनमानी के खिलाफ कानूनी कदम"
+        ],
+        "cons": [
+          "इसमें कुछ समय लग सकता है"
+        ],
+        "estimated_timeframe": "1 से 3 महीने",
+        "forum": "National Consumer Helpline / District Consumer Commission"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "CPA_2019_SEC_2_7",
+        "provision_name": "Consumer Protection Act, 2019 - Section 2(7)",
+        "relevance": "यह साबित करता है कि पैसे देकर सामान खरीदने वाले आप एक 'उपभोक्ता' हैं।"
+      },
+      {
+        "corpus_id": "CPA_2019_SEC_2_10",
+        "provision_name": "Consumer Protection Act, 2019 - Section 2(10)",
+        "relevance": "फटे हुए जूते सामान की गुणवत्ता में 'खोट या दोष' (defect) की परिभाषा के अंतर्गत आते हैं।"
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "क्या आपके पास ऑनलाइन खरीद का बिल या रसीद है?",
+      "क्या आपके पास फटे हुए जूतों और कंपनी के मना करने की चैट या ईमेल का सबूत है?"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

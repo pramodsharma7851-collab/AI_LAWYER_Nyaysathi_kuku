@@ -1,0 +1,67 @@
+{
+  "test_id": "employment_04_arbitrary_salary_cut_hinglish",
+  "domain": "employment",
+  "language": "Hinglish",
+  "input_type": "clean",
+  "query": "Boss ne bina bataye meri salary se 15000 rupaye kaat liye bol kar ki company ka target meet nahi hua tha.",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "PWA_1936_SEC_15",
+    "PWA_1936_SEC_3",
+    "PWA_1936_SEC_5",
+    "PWA_1936_SEC_7"
+  ],
+  "execution_time_sec": 6.389,
+  "model_output": {
+    "summary": "Aapke boss ne company ka target meet na hone ka bol kar aapki salary se bina bataye 15,000 rupaye kaat liye hain. Payment of Wages Act ke mutabiq, wages bina kisi authorized deduction ke puri milni chahiye.",
+    "facts_extracted": [
+      "Boss ne salary se 15,000 rupaye kaat liye hain",
+      "Deduction ka reason company ka target meet na hona bataya gaya hai"
+    ],
+    "options": [
+      {
+        "title": "Labour Commissioner ke paas application file karein",
+        "description": "Aap Payment of Wages Act ke section 15 ke antargat apni kata gayi salary ke liye Labour Officer ya appointed Authority ke paas application de sakte hain.",
+        "pros": [
+          "Kata hua paisa wapas milne ki kanooni koshish ki ja sakti hai",
+          "Authority compensation ka order bhi de sakti hai"
+        ],
+        "cons": [
+          "Isme kuch samay lag sakta hai"
+        ],
+        "estimated_timeframe": "Kuch hafte ya mahine",
+        "forum": "Labour Commissioner Office / NALSA Helpline 15100"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "PWA_1936_SEC_3",
+        "provision_name": "Payment of Wages Act, 1936 Section 3",
+        "relevance": "Employer ki zimmedari hai ki woh aapko aapki poori wages ka bhugtaan kare."
+      },
+      {
+        "corpus_id": "PWA_1936_SEC_7",
+        "provision_name": "Payment of Wages Act, 1936 Section 7",
+        "relevance": "Salary se koi bhi deduction bina kisi authorized kanooni rule ke nahi ki ja sakti."
+      },
+      {
+        "corpus_id": "PWA_1936_SEC_15",
+        "provision_name": "Payment of Wages Act, 1936 Section 15",
+        "relevance": "Improper deduction ya salary delay hone par aap appointed Authority ke paas claim file kar sakte hain."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Kya aapke employment agreement ya contract mein target pura na hone par salary katne ka koi provision hai?"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

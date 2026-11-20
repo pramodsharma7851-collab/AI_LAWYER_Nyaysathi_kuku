@@ -1,0 +1,82 @@
+{
+  "test_id": "consumer_10_edaakhil_procedure_en",
+  "domain": "consumer",
+  "language": "English",
+  "input_type": "clean",
+  "query": "How does an ordinary citizen file a complaint on e-Daakhil without going to a lawyer?",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "CPA_2019_SEC_34",
+    "CPA_2019_SEC_35",
+    "CPA_2019_SEC_69",
+    "CRIMINAL_REFORM_NOTE_BNS"
+  ],
+  "execution_time_sec": 6.856,
+  "model_output": {
+    "summary": "As a consumer, you can file a complaint yourself without hiring a lawyer by using the official e-Daakhil online portal (edaakhil.nic.in) or by filing it in person or by post with the District Consumer Commission. Make sure the value of goods or services does not exceed 50 Lakhs and that you file within two years from the date the dispute arose.",
+    "facts_extracted": [
+      "User wants to know how to file a consumer complaint on e-Daakhil without a lawyer",
+      "Complaint must be within the District Commission jurisdiction (goods or services value up to 50 Lakhs)",
+      "Complaint must be filed within two years of the cause of action"
+    ],
+    "options": [
+      {
+        "title": "File Online via e-Daakhil",
+        "description": "Visit the official e-Daakhil portal (edaakhil.nic.in), register as a complainant, fill out the complaint form, upload the required documents, bills, payment receipts, and pay the prescribed fee online.",
+        "pros": [
+          "Can be done entirely from home without a lawyer",
+          "Saves time and travel costs"
+        ],
+        "cons": [
+          "Requires basic digital literacy and internet access"
+        ],
+        "estimated_timeframe": "1 to 2 days to prepare and submit",
+        "forum": "e-Daakhil Portal (edaakhil.nic.in)"
+      },
+      {
+        "title": "File In Person or By Post",
+        "description": "Prepare a written complaint along with supporting documents, purchase bills, and the required fee, and submit it physically or by post to the local District Consumer Commission.",
+        "pros": [
+          "Useful if you are not comfortable using online portals"
+        ],
+        "cons": [
+          "Requires visiting the District Commission office or sending postal mail"
+        ],
+        "estimated_timeframe": "3 to 5 days for postal submission",
+        "forum": "District Consumer Disputes Redressal Commission"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "CPA_2019_SEC_35",
+        "provision_name": "Consumer Protection Act, 2019 - Section 35",
+        "relevance": "Permits a consumer to file a complaint in person, by post, or online through the e-Daakhil portal."
+      },
+      {
+        "corpus_id": "CPA_2019_SEC_34",
+        "provision_name": "Consumer Protection Act, 2019 - Section 34",
+        "relevance": "Sets the pecuniary jurisdiction of the District Commission for claims up to 50 Lakhs."
+      },
+      {
+        "corpus_id": "CPA_2019_SEC_69",
+        "provision_name": "Consumer Protection Act, 2019 - Section 69",
+        "relevance": "Mandates that complaints must be filed within two years from the date the cause of action arose."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Details about the specific goods or services purchased",
+      "Value of the transaction",
+      "Date when the cause of action or dispute occurred"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

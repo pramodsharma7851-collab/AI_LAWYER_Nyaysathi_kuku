@@ -1,0 +1,39 @@
+============================================================
+NYAYASATHI SCOPE GATE & TOPIC BOUNDARY EVALUATION REPORT
+Generated: 2026-11-20 21:53:52
+============================================================
+
+SUMMARY METRICS:
+------------------------------------------------------------
+- Total Test Cases Evaluated: 33
+- Out-of-Scope Queries Tested: 24
+- Out-of-Scope Successfully Rejected: 24 / 24 (100.0%)
+- In-Scope Queries Tested: 9
+- In-Scope Successfully Accepted: 9 / 9 (100.0%)
+- False Rejection Rate: 0.0% (0 cases)
+- False Acceptance Rate: 0.0% (0 cases)
+- Total Failures: 0
+
+BREAKDOWN BY CATEGORY:
+------------------------------------------------------------
+1. Pure Out-of-Scope (Cricket, Code, Recipes, Trivia, Math, Poems, Politics, Tax, Medical, Divorce, Criminal, Land Title):
+   - Status: 100% REJECTED with exact fixed "I do not know." (or localized equivalent).
+   - Answering model was NEVER invoked for out-of-scope turns.
+
+2. Adversarial Prompt Injections & Jailbreak Smuggling (8 attempts):
+   - Status: 8/8 REJECTED (100% defense rate against DAN, ignore instructions, system override, roleplay).
+
+3. Life Safety / Emergency Exception:
+   - Status: Correctly routes immediate threat to 112 / 181.
+
+4. In-Scope Multi-Turn Follow-Ups:
+   - Status: Follow-up questions ("what about the notice?", "ok draft complaint") correctly stay within active case domain.
+
+FALSE REJECTIONS:
+------------------------------------------------------------
+None (0 false rejections).
+
+FAILURES:
+------------------------------------------------------------
+None (0 failures).
+============================================================

@@ -1,0 +1,84 @@
+{
+  "test_id": "consumer_01_defective_laptop_en",
+  "domain": "consumer",
+  "language": "English",
+  "input_type": "clean",
+  "query": "Bought a Dell laptop for Rs. 65,000 on Amazon. Display died on day 3. Service center says liquid damage without opening it and refuses replacement.",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "CPA_2019_SEC_2_11",
+    "CPA_2019_SEC_2_7",
+    "CPA_2019_SEC_39",
+    "ICA_1872_SEC_73"
+  ],
+  "execution_time_sec": 3.519,
+  "model_output": {
+    "summary": "You bought a Dell laptop for Rs. 65,000 from Amazon, and the display stopped working on the third day. The service center is refusing a replacement by claiming liquid damage without even opening it, which is an unfair practice and a deficiency in service.",
+    "facts_extracted": [
+      "Bought a Dell laptop for Rs. 65,000 on Amazon.",
+      "Display died on day 3 of purchase.",
+      "Service center claims liquid damage without opening the laptop and refuses replacement."
+    ],
+    "options": [
+      {
+        "title": "Escalate to Amazon and Dell Support",
+        "description": "Raise a formal complaint with Amazon customer support and Dell management regarding the unverified claim of liquid damage by their service center on a 3-day-old product.",
+        "pros": [
+          "May lead to a quick resolution without legal costs",
+          "E-commerce platforms often support customers for early-stage defects"
+        ],
+        "cons": [
+          "Can take multiple follow-ups",
+          "May not guarantee a direct replacement if the service center report stands"
+        ],
+        "estimated_timeframe": "1 to 2 weeks",
+        "forum": "Amazon Customer Support / Dell India Support"
+      },
+      {
+        "title": "File a Consumer Complaint",
+        "description": "File a formal complaint at the District Consumer Commission seeking replacement of the goods or refund of the price along with compensation for deficiency in service.",
+        "pros": [
+          "Legally binding orders for replacement or refund",
+          "Can claim compensation for mental agony and loss"
+        ],
+        "cons": [
+          "Takes time and effort",
+          "May require attending hearings"
+        ],
+        "estimated_timeframe": "3 to 6 months",
+        "forum": "District Consumer Disputes Redressal Commission"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "CPA_2019_SEC_2_7",
+        "provision_name": "Consumer Protection Act, 2019 Section 2(7)",
+        "relevance": "Establishes your status as a consumer since you purchased the laptop for consideration."
+      },
+      {
+        "corpus_id": "CPA_2019_SEC_2_11",
+        "provision_name": "Consumer Protection Act, 2019 Section 2(11)",
+        "relevance": "Defines deficiency in service, covering the faulty laptop and unfair refusal of service."
+      },
+      {
+        "corpus_id": "CPA_2019_SEC_39",
+        "provision_name": "Consumer Protection Act, 2019 Section 39",
+        "relevance": "Empowers the consumer commission to order replacement of goods, return of price, or compensation."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Unopened evidence or second opinion proving there is no internal liquid damage.",
+      "Written rejection report from the service center."
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

@@ -1,0 +1,72 @@
+{
+  "test_id": "employment_02_illegal_termination_hi",
+  "domain": "employment",
+  "language": "Hindi (हिन्दी)",
+  "input_type": "clean",
+  "query": "कंपनी ने मुझे बिना किसी लिखित कारण या 1 महीने के नोटिस के तुरंत नौकरी से निकाल दिया और पिछले महीने की सैलरी भी रोक ली।",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "PWA_1936_SEC_15",
+    "PWA_1936_SEC_3",
+    "PWA_1936_SEC_5",
+    "PWA_1936_SEC_7"
+  ],
+  "execution_time_sec": 5.049,
+  "model_output": {
+    "summary": "कंपनी द्वारा आपको बिना नोटिस या कारण के नौकरी से निकालना और पिछले महीने की सैलरी रोक लेना गलत है। पेमेंट ऑफ वेजेस एक्ट के तहत आपकी कमाई गई मजदूरी और अंतिम वेतन का भुगतान नौकरी छूटने के दूसरे कामकाजी दिन के भीतर होना चाहिए।",
+    "facts_extracted": [
+      "कंपनी ने बिना किसी लिखित कारण या 1 महीने के नोटिस के नौकरी से निकाला",
+      "पिछले महीने की सैलरी रोक ली गई है"
+    ],
+    "options": [
+      {
+        "title": "लेबर कमिश्नर के पास शिकायत दर्ज करें",
+        "description": "आप पेमेंट ऑफ वेजेस एक्ट के तहत रोकी गई सैलरी और देरी के भुगतान के लिए अधिकृत प्राधिकारी (लेबर कमिश्नर) के समक्ष आवेदन कर सकते हैं।",
+        "pros": [
+          "कानूनी रूप से वेतन और मुआवजा मिलने की संभावना",
+          "अवैध कटौती या देरी पर मुआवजे का प्रावधान"
+        ],
+        "cons": [
+          "इसमें कुछ समय लग सकता है"
+        ],
+        "estimated_timeframe": "कुछ सप्ताह से महीने",
+        "forum": "Labour Commissioner Office / Payment of Wages Authority"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "PWA_1936_SEC_3",
+        "provision_name": "Payment of Wages Act, 1936, Section 3",
+        "relevance": "नियोक्ता (employer) आपकी मजदूरी का भुगतान करने के लिए कानूनी रूप से जिम्मेदार है।"
+      },
+      {
+        "corpus_id": "PWA_1936_SEC_5",
+        "provision_name": "Payment of Wages Act, 1936, Section 5",
+        "relevance": "नौकरी समाप्त होने पर कमाए गए वेतन का भुगतान नौकरी समाप्त होने के दिन से दूसरे कामकाजी दिन की समाप्ति से पहले किया जाना चाहिए।"
+      },
+      {
+        "corpus_id": "PWA_1936_SEC_7",
+        "provision_name": "Payment of Wages Act, 1936, Section 7",
+        "relevance": "वेतन का भुगतान बिना किसी अनधिकृत कटौती के किया जाना चाहिए।"
+      },
+      {
+        "corpus_id": "PWA_1936_SEC_15",
+        "provision_name": "Payment of Wages Act, 1936, Section 15",
+        "relevance": "वेतन में देरी या अवैध कटौती के खिलाफ आप लेबर अथॉरिटी के पास आवेदन कर सकते हैं जो भुगतान और मुआवजे का निर्देश दे सकती है।"
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "क्या आपके पास कोई नियुक्ति पत्र (Appointment Letter) या रोजगार अनुबंध (Employment Contract) है जिसमें नोटिस अवधि का नियम लिखा हो?"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

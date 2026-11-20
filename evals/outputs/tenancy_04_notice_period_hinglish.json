@@ -1,0 +1,70 @@
+{
+  "test_id": "tenancy_04_notice_period_hinglish",
+  "domain": "tenancy",
+  "language": "Hinglish",
+  "input_type": "clean",
+  "query": "Maine 15 din ka notice diya tha vacate karne ka as per month to month oral lease, par landlord bol raha hai ki 2 mahine ka rent katega.",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "MTA_2021_SEC_11",
+    "MTA_2021_SEC_20",
+    "MTA_2021_SEC_21",
+    "TPA_1882_SEC_106"
+  ],
+  "execution_time_sec": 5.927,
+  "model_output": {
+    "summary": "Aapne month-to-month oral lease ke tahat 15 din ka notice dekar ghar khali karne ki baat ki hai, lekin landlord 2 mahine ka rent katne ki baat kar raha hai. Transfer of Property Act, 1882 ke anusar, month-to-month lease ko 15 din ke notice par khatam kiya ja sakta hai.",
+    "facts_extracted": [
+      "Tenancy month-to-month oral lease par thi",
+      "Aapne 15 din ka notice diya vacate karne ke liye",
+      "Landlord 2 mahine ka rent kaatna chahta hai"
+    ],
+    "options": [
+      {
+        "title": "Discussion and Written Settlement",
+        "description": "Landlord se baat karein aur unhe Transfer of Property Act ke 15 din ke notice rule ke baare mein yaad dilayein.",
+        "pros": [
+          "Jaldi aur bina kahrche ke samadhan ho sakta hai"
+        ],
+        "cons": [
+          "Agar landlord nahi maane toh dikkat ho sakti hai"
+        ],
+        "estimated_timeframe": "1-3 din",
+        "forum": null
+      },
+      {
+        "title": "Contact District Legal Services Authority (DLSA)",
+        "description": "Agar landlord bina baat ke security deposit ya extra rent roke, toh aap NALSA helpline (15100) ya local DLSA se madad le sakte hain.",
+        "pros": [
+          "Muft aur kanooni salah milti hai"
+        ],
+        "cons": [
+          "Thoda samay lag sakta hai"
+        ],
+        "estimated_timeframe": "1 hafta",
+        "forum": "District Legal Services Authority (DLSA)"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "TPA_1882_SEC_106",
+        "provision_name": "Transfer of Property Act, 1882 Section 106",
+        "relevance": "Yeh section batata hai ki bina written contract ke month-to-month lease ko 15 din ke notice par khatam kiya ja sakta hai."
+      }
+    ],
+    "confidence": "medium",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Kya aapne koi security deposit diya tha?",
+      "Kya notice month ke end par expire ho raha hai?"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

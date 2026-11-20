@@ -1,0 +1,77 @@
+{
+  "test_id": "tenancy_02_repainting_wear_tear_en",
+  "domain": "tenancy",
+  "language": "English",
+  "input_type": "clean",
+  "query": "Owner deducted 25,000 for repainting the entire apartment even though there was only normal wear and tear over my 2 year stay.",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "LIMIT_1963_ART_113",
+    "MTA_2021_SEC_11",
+    "TPA_1882_SEC_108_B",
+    "TPA_1882_SEC_108_M"
+  ],
+  "execution_time_sec": 3.271,
+  "model_output": {
+    "summary": "Your landlord has deducted 25,000 rupees from your deposit for repainting the entire apartment. Under the law, tenants are not responsible for normal wear and tear and are only liable for damages exceeding it.",
+    "facts_extracted": [
+      "Stayed in the apartment for 2 years",
+      "Owner deducted 25,000 for repainting",
+      "The condition of the apartment only had normal wear and tear"
+    ],
+    "options": [
+      {
+        "title": "Send a Formal Written Request/Notice",
+        "description": "Write a formal message or letter to your landlord citing the rules against charging for normal wear and tear, and request the full return of your deposit.",
+        "pros": [
+          "Inexpensive",
+          "Often resolves the issue quickly without legal action"
+        ],
+        "cons": [
+          "Landlord may ignore or refuse the request"
+        ],
+        "estimated_timeframe": "1 to 2 weeks",
+        "forum": "Direct negotiation with landlord"
+      },
+      {
+        "title": "Approach District Legal Services Authority (DLSA)",
+        "description": "Contact your local DLSA for mediation support to help resolve the security deposit dispute with your landlord.",
+        "pros": [
+          "Free or low-cost legal guidance",
+          "Assistance from experienced counselors"
+        ],
+        "cons": [
+          "Requires participation from both parties for mediation to work"
+        ],
+        "estimated_timeframe": "2 to 4 weeks",
+        "forum": "District Legal Services Authority (DLSA / NALSA Helpline 15100)"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "TPA_1882_SEC_108_M",
+        "provision_name": "Transfer of Property Act, 1882 Section 108(m)",
+        "relevance": "States that the tenant is only bound to restore the property subject to changes caused by reasonable wear and tear."
+      },
+      {
+        "corpus_id": "MTA_2021_SEC_11",
+        "provision_name": "Model Tenancy Act, 2021 Section 11",
+        "relevance": "Mandates that security deposits must be refunded upon taking vacant possession after making legitimate deductions only for damages exceeding normal wear and tear."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Whether there is a written rent agreement specifying painting clauses",
+      "Photographic evidence of the apartment condition at move-in and move-out"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

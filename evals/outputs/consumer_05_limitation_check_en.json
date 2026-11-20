@@ -1,0 +1,70 @@
+{
+  "test_id": "consumer_05_limitation_check_en",
+  "domain": "consumer",
+  "language": "English",
+  "input_type": "clean",
+  "query": "Can I file a consumer court case for a defective washing machine purchased 18 months ago?",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "CPA_2019_SEC_34",
+    "CPA_2019_SEC_35",
+    "CPA_2019_SEC_39",
+    "ICA_1872_SEC_74"
+  ],
+  "execution_time_sec": 2.901,
+  "model_output": {
+    "summary": "You can file a complaint in the District Consumer Commission regarding a defective washing machine purchased 18 months ago, provided the cost of the machine was under Rs. 50 Lakhs. You can ask for a replacement, repair, refund, or compensation for the defect.",
+    "facts_extracted": [
+      "Purchased a washing machine 18 months ago",
+      "The washing machine is defective"
+    ],
+    "options": [
+      {
+        "title": "File a Consumer Complaint Online or Offline",
+        "description": "You can file a formal complaint with the District Consumer Commission where you live or where the seller operates. You can file it in person, by post, or online through the e-Daakhil portal along with your purchase bill and proof of the defect.",
+        "pros": [
+          "Can seek replacement, refund, or compensation for loss or injury",
+          "Can be filed online easily via e-Daakhil portal"
+        ],
+        "cons": [
+          "Requires valid purchase receipts and proof of the defect",
+          "Can take time to resolve through legal proceedings"
+        ],
+        "estimated_timeframe": "A few months",
+        "forum": "e-Daakhil Portal (edaakhil.nic.in) / District Consumer Commission"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "CPA_2019_SEC_34",
+        "provision_name": "Consumer Protection Act, 2019 Section 34",
+        "relevance": "Explains that the District Commission has the power to handle complaints where the value of goods paid is up to Rs. 50 Lakhs and where you reside."
+      },
+      {
+        "corpus_id": "CPA_2019_SEC_35",
+        "provision_name": "Consumer Protection Act, 2019 Section 35",
+        "relevance": "Outlines how you can file your consumer complaint in person, by post, or online via the e-Daakhil portal."
+      },
+      {
+        "corpus_id": "CPA_2019_SEC_39",
+        "provision_name": "Consumer Protection Act, 2019 Section 39",
+        "relevance": "Details the types of relief you can ask for, such as product replacement, refund of price, or compensation for defects."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Purchase price of the washing machine",
+      "Details of any warranty or guarantee period",
+      "Whether you have a purchase receipt or bill"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

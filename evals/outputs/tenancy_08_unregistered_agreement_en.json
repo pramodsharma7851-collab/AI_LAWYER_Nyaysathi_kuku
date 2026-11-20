@@ -1,0 +1,86 @@
+{
+  "test_id": "tenancy_08_unregistered_agreement_en",
+  "domain": "tenancy",
+  "language": "English",
+  "input_type": "missing_info",
+  "query": "We only had an informal WhatsApp agreement for rent, no registered agreement. Can I still claim my deposit in Chennai?",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "ICA_1872_SEC_73",
+    "MTA_2021_SEC_11",
+    "MTA_2021_SEC_20",
+    "TPA_1882_SEC_108_M"
+  ],
+  "execution_time_sec": 3.532,
+  "model_output": {
+    "summary": "You can still seek to claim your security deposit even though you only had an informal WhatsApp agreement, as agreements can be formed through digital communication. However, since the Model Tenancy Act requires written and registered agreements, and there may be factual complications, you should consult an advocate or the District Legal Services Authority.",
+    "facts_extracted": [
+      "The agreement for rent was informal and made over WhatsApp.",
+      "There is no registered or formal written tenancy agreement.",
+      "The rental property is located in Chennai.",
+      "The user wants to claim their security deposit back."
+    ],
+    "options": [
+      {
+        "title": "Send a Formal Legal Notice",
+        "description": "Draft a formal legal notice through an advocate to the landlord demanding the return of your security deposit, attaching WhatsApp chat proofs of payment and agreement.",
+        "pros": [
+          "Often prompts landlords to settle out of court",
+          "Creates an official paper trail"
+        ],
+        "cons": [
+          "Involves legal fees for drafting",
+          "May not work if the landlord is uncooperative"
+        ],
+        "estimated_timeframe": "1 to 2 weeks",
+        "forum": "Civil Court / Legal Aid"
+      },
+      {
+        "title": "Contact District Legal Services Authority (DLSA)",
+        "description": "Reach out to the local DLSA for free legal guidance and assistance regarding your rental dispute.",
+        "pros": [
+          "Free or low-cost legal help",
+          "Reliable guidance from legal professionals"
+        ],
+        "cons": [
+          "Can involve waiting periods",
+          "May require visiting their office in person"
+        ],
+        "estimated_timeframe": "2 to 4 weeks",
+        "forum": "District Legal Services Authority (DLSA)"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "MTA_2021_SEC_20",
+        "provision_name": "Model Tenancy Act, 2021 Section 20",
+        "relevance": "Mandates that tenancy arrangements should be in writing and informed to the Rent Authority, highlighting the procedural requirement that was missed in an informal WhatsApp agreement."
+      },
+      {
+        "corpus_id": "MTA_2021_SEC_11",
+        "provision_name": "Model Tenancy Act, 2021 Section 11",
+        "relevance": "Outlines the rules for security deposits and the mandate for refunding them upon handing over vacant possession."
+      },
+      {
+        "corpus_id": "ICA_1872_SEC_73",
+        "provision_name": "Indian Contract Act, 1872 Section 73",
+        "relevance": "Relates to compensation for loss or damage caused by a breach of contract, which may apply if terms of the informal agreement were violated."
+      }
+    ],
+    "confidence": "medium",
+    "needs_lawyer": true,
+    "lawyer_reason": "Because there is no formal registered agreement and the arrangement was only over WhatsApp, legal representation is advised to evaluate the evidentiary value of your digital chats and help recover the deposit properly.",
+    "missing_info": [
+      "Proof of the security deposit amount paid",
+      "Evidence of handing over vacant possession of the premises to the landlord",
+      "Any written or chat proof regarding deductions or lack thereof by the landlord"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

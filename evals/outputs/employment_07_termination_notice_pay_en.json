@@ -1,0 +1,70 @@
+{
+  "test_id": "employment_07_termination_notice_pay_en",
+  "domain": "employment",
+  "language": "English",
+  "input_type": "clean",
+  "query": "Can an employer terminate a permanent worker immediately without giving 30 days notice pay under Indian law?",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "IDA_1947_SEC_25F",
+    "IDA_1947_SEC_2A",
+    "PWA_1936_SEC_3",
+    "PWA_1936_SEC_7"
+  ],
+  "execution_time_sec": 4.416,
+  "model_output": {
+    "summary": "Under Indian labour law, a permanent worker who has completed at least one year of continuous service cannot simply be terminated immediately without proper notice or pay. If they are retrenched, they must receive one month's notice in writing or wages in lieu of that notice, along with retrenchment compensation.",
+    "facts_extracted": [
+      "Worker is permanent",
+      "Termination was immediate without 30 days notice pay",
+      "Question is whether immediate termination without notice pay is permitted"
+    ],
+    "options": [
+      {
+        "title": "Approach Conciliation Officer",
+        "description": "File an individual dispute regarding your termination under the Industrial Disputes Act since dismissal or termination of an individual workman is deemed an industrial dispute.",
+        "pros": [
+          "Allows direct approach without needing union support",
+          "Helps mediate a settlement with the employer"
+        ],
+        "cons": [
+          "Can take time to resolve",
+          "May require legal assistance if mediation fails"
+        ],
+        "estimated_timeframe": "1 to 3 months",
+        "forum": "Labour Department / Conciliation Officer"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "IDA_1947_SEC_25F",
+        "provision_name": "Industrial Disputes Act, 1947 Section 25F",
+        "relevance": "States that a worker with continuous service for one year must be given one month's notice in writing or wages in lieu of notice before retrenchment."
+      },
+      {
+        "corpus_id": "IDA_1947_SEC_2A",
+        "provision_name": "Industrial Disputes Act, 1947 Section 2A",
+        "relevance": "Allows an individual workman whose services are terminated to treat it as an industrial dispute and approach a Conciliation Officer directly."
+      },
+      {
+        "corpus_id": "PWA_1936_SEC_7",
+        "provision_name": "Payment of Wages Act, 1936 Section 7",
+        "relevance": "Protects wages from unauthorized deductions or arbitrary retention by the employer."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": true,
+    "lawyer_reason": "Employment disputes involving termination and calculation of retrenchment compensation often require formal legal drafting and representation before labour authorities or courts.",
+    "missing_info": [
+      "Exact duration of continuous service completed by the worker",
+      "Reason provided by the employer for termination"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

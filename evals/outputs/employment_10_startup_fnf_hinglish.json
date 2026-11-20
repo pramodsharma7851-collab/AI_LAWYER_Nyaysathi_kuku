@@ -1,0 +1,88 @@
+{
+  "test_id": "employment_10_startup_fnf_hinglish",
+  "domain": "employment",
+  "language": "Hinglish",
+  "input_type": "clean",
+  "query": "Startup band ho raha hai aur founder bol raha hai ki FNF settlement ke paise nahi bache, investors ke aane par denge.",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "LSAA_1987_SEC_19",
+    "PWA_1936_SEC_3",
+    "PWA_1936_SEC_5",
+    "PWA_1936_SEC_7"
+  ],
+  "execution_time_sec": 4.882,
+  "model_output": {
+    "summary": "Startup band hone par founder ka FNF (Full and Final) settlement ke paise rokna aur investors ka wait karne ko kehna galat hai. Payment of Wages Act ke anusar, jab bhi kisi employee ki naukri khatam ki jati hai, toh uske earned wages (kamaye gaye paise) naukri khatam hone ke do working dinon ke andar milne chahiye.",
+    "facts_extracted": [
+      "Startup band ho raha hai",
+      "Founder FNF settlement ke paise dene se mana kar raha hai",
+      "Founder ka kehna hai ki investor aane ke baad paise diye jayenge"
+    ],
+    "options": [
+      {
+        "title": "Legal Notice Bhejein",
+        "description": "Aap apne employer ya startup ko ek formal legal notice bhej sakte hain jisme FNF settlement ke paise 2 din ke andar dene ki maang ki jaye.",
+        "pros": [
+          "Employer par dabav banta hai",
+          "Court jane se pehle mamla sulajh sakta hai"
+        ],
+        "cons": [
+          "Thoda kharcha ho sakta hai",
+          "Employer respond na kare toh agla kadam uthana padega"
+        ],
+        "estimated_timeframe": "7 to 15 days",
+        "forum": "Labour Commissioner Office"
+      },
+      {
+        "title": "Lok Adalat ka Sahayata Lein",
+        "description": "Aap District Legal Services Authority (DLSA) ke zariye Lok Adalat mein apna mamla rakh sakte hain jahan bina court fee ke aapas mein raazinama ya settlement kiya ja sakta hai.",
+        "pros": [
+          "Zero court fee",
+          "Faisla final aur jaldi ho sakta hai"
+        ],
+        "cons": [
+          "Dono pakshon ki raazi hona zaroori hai"
+        ],
+        "estimated_timeframe": "1 to 2 months",
+        "forum": "District Legal Services Authority (DLSA)"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "PWA_1936_SEC_5",
+        "provision_name": "Payment of Wages Act, 1936 Section 5",
+        "relevance": "Yeh section kehta hai ki jab employer dwara naukri khatam ki jati hai, toh earned wages ko do working din ke andar dena anivarya hai."
+      },
+      {
+        "corpus_id": "PWA_1936_SEC_3",
+        "provision_name": "Payment of Wages Act, 1936 Section 3",
+        "relevance": "Yeh tay karta hai ki employer hi zemedar hai ki employees ko sabhi wages time par milein."
+      },
+      {
+        "corpus_id": "PWA_1936_SEC_7",
+        "provision_name": "Payment of Wages Act, 1936 Section 7",
+        "relevance": "Wages bina kisi unauthorized deduction ke diye jane chahiye."
+      },
+      {
+        "corpus_id": "LSAA_1987_SEC_19",
+        "provision_name": "Legal Services Authorities Act, 1987 Section 19",
+        "relevance": "Pre-litigation disputes ko sulajhane ke liye Lok Adalat organize karne ki kshamta deta hai."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": true,
+    "lawyer_reason": "Startup ke band hone aur fund na hone ki sthiti mein ek advocate ya DLSA (Helpline 15100) ki madad se legal notice bhejna aur settlement karwana behtar rahega.",
+    "missing_info": [
+      "Aapka exact employment contract ya appointment letter",
+      "Kitna total amount pending hai"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

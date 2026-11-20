@@ -1,0 +1,54 @@
+{
+  "test_id": "tenancy_05_deposit_cap_en",
+  "domain": "tenancy",
+  "language": "English",
+  "input_type": "clean",
+  "query": "New landlord in Pune is asking for 6 months rent in advance as security deposit for a residential apartment. Is that allowed?",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "MTA_2021_SEC_11",
+    "MTA_2021_SEC_20",
+    "MTA_2021_SEC_21",
+    "TPA_1882_SEC_108_B"
+  ],
+  "execution_time_sec": 4.467,
+  "model_output": {
+    "summary": "Your new landlord in Pune is asking for 6 months of rent as a security deposit for a residential apartment. According to the law, the security deposit for residential premises should not be more than two months' rent.",
+    "facts_extracted": [
+      "New landlord in Pune is asking for 6 months rent in advance as security deposit",
+      "The property is a residential apartment"
+    ],
+    "options": [
+      {
+        "title": "Discuss with Landlord",
+        "description": "Show the landlord the rule stating that residential security deposits cannot exceed two months' rent.",
+        "pros": [
+          "May resolve the issue amicably without dispute"
+        ],
+        "cons": [
+          "Landlord may refuse to follow or insist on their terms"
+        ],
+        "estimated_timeframe": "1-2 days",
+        "forum": null
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "MTA_2021_SEC_11",
+        "provision_name": "Model Tenancy Act, 2021 Section 11",
+        "relevance": "States that the security deposit for residential premises shall not exceed two months' rent."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": []
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

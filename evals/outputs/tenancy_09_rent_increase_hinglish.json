@@ -1,0 +1,79 @@
+{
+  "test_id": "tenancy_09_rent_increase_hinglish",
+  "domain": "tenancy",
+  "language": "Hinglish",
+  "input_type": "clean",
+  "query": "Agreement beech me hi landlord ne 30% rent badha diya bina kisi notice ke. Kya ye legal hai?",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "LSAA_1987_SEC_12",
+    "MTA_2021_SEC_20",
+    "MTA_2021_SEC_21",
+    "TPA_1882_SEC_108_B"
+  ],
+  "execution_time_sec": 3.841,
+  "model_output": {
+    "summary": "Landlord ne agreement ke beech mein bina kisi notice ke rent 30% badha diya hai. Aapka agreement written hona chahiye aur bina terms follow kiye rent badhana galat hai. Aapko ek advocate ya DLSA ki madad leni chahiye.",
+    "facts_extracted": [
+      "Landlord ne agreement ke beech mein rent 30% badha diya",
+      "Bina kisi notice ke rent badhaya gaya"
+    ],
+    "options": [
+      {
+        "title": "Contact DLSA for Free Legal Aid",
+        "description": "Aap apni samasya ke liye District Legal Services Authority (DLSA) ya NALSA Helpline (15100) par sampark kar sakte hain agar aap free legal aid ke criteria mein aate hain.",
+        "pros": [
+          "Muft mein kanooni salah mil sakti hai"
+        ],
+        "cons": [
+          "Sarkar ki taraf se eligibility criteria poora hona zaroori hai"
+        ],
+        "estimated_timeframe": "1 se 3 din",
+        "forum": "District Legal Services Authority (DLSA)"
+      },
+      {
+        "title": "Consult an Advocate",
+        "description": "Ek vakeel (advocate) se milkar landlord ko notice bhejne aur apne adhikaaron ki raksha karne ke liye salah lein.",
+        "pros": [
+          "Sahi kanooni kadam uthaye ja sakte hain"
+        ],
+        "cons": [
+          "Advocate ki fees lag sakti hai"
+        ],
+        "estimated_timeframe": "Turant",
+        "forum": null
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "MTA_2021_SEC_20",
+        "provision_name": "Model Tenancy Act, 2021 Section 20",
+        "relevance": "Tenant aur landlord ke beech written agreement hona zaroori hai."
+      },
+      {
+        "corpus_id": "LSAA_1987_SEC_12",
+        "provision_name": "Legal Services Authorities Act, 1987 Section 12",
+        "relevance": "Kuch categories ke nagriko ko muft kanooni sahayata (Free Legal Services) pane ka adhikaar deta hai."
+      },
+      {
+        "corpus_id": "TPA_1882_SEC_108_B",
+        "provision_name": "Transfer of Property Act, 1882 Section 108(b)-(c)",
+        "relevance": "Tenant ko bina kisi rukaawat ke lease period ke dauran property rakhne ka adhikaar deta hai jab tak woh rent aur terms pure kar raha hai."
+      }
+    ],
+    "confidence": "medium",
+    "needs_lawyer": true,
+    "lawyer_reason": "Kyunki landlord ne agreement ke beech mein rent badhaya hai aur iske liye ek advocate ya DLSA ki madad se kanooni notice bhejna behtar rahega, sath hi verified authority mein rent hike se juda specific section nahi hai.",
+    "missing_info": [
+      "Kya aapka tenancy agreement likhit (written) hai?",
+      "Kya aapki income ya category Legal Services Authorities Act ke tahat free legal aid ke liye yogy hai?"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

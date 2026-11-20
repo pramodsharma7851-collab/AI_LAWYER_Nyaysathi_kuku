@@ -1,0 +1,83 @@
+{
+  "test_id": "consumer_07_one_sided_contract_en",
+  "domain": "consumer",
+  "language": "English",
+  "input_type": "clean",
+  "query": "Coaching institute made me sign a contract saying fees are 100% non-refundable under any circumstance even if I leave in 2 days. Is this enforceable?",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "CPA_2019_SEC_2_10",
+    "CPA_2019_SEC_35",
+    "ICA_1872_SEC_73",
+    "LSAA_1987_SEC_19"
+  ],
+  "execution_time_sec": 5.544,
+  "model_output": {
+    "summary": "The coaching institute made you sign a contract stating fees are 100% non-refundable. Generally, charging the full fee for a course you left within 2 days may be considered an unfair trade practice or unreasonable loss claim, as compensation must be based on actual loss suffered rather than penalty clauses. You can approach the consumer forum or use alternate dispute methods.",
+    "facts_extracted": [
+      "Coaching institute contract states fees are 100% non-refundable under any circumstance",
+      "Student left the institute in 2 days"
+    ],
+    "options": [
+      {
+        "title": "File a Consumer Complaint",
+        "description": "You can file a formal complaint before the District Commission through the e-Daakhil portal regarding unfair terms or deficiency in service.",
+        "pros": [
+          "Provides a formal legal forum for dispute resolution",
+          "Can be filed online"
+        ],
+        "cons": [
+          "May take time to resolve",
+          "Requires documentary evidence like receipts and contracts"
+        ],
+        "estimated_timeframe": "3 to 6 months",
+        "forum": "District Commission (via edaakhil.nic.in)"
+      },
+      {
+        "title": "Approach Lok Adalat",
+        "description": "You can seek a pre-litigation settlement through the District Legal Services Authority to reach a mutual compromise with the coaching institute with no court fees.",
+        "pros": [
+          "Fast and amicable",
+          "Zero court fees",
+          "Award is final and binding"
+        ],
+        "cons": [
+          "Depends on the coaching institute agreeing to participate"
+        ],
+        "estimated_timeframe": "1 to 2 months",
+        "forum": "District Legal Services Authority / Lok Adalat"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "CPA_2019_SEC_35",
+        "provision_name": "Consumer Protection Act, 2019 Section 35",
+        "relevance": "Outlines the manner in which a consumer complaint can be filed with the District Commission electronically or in person."
+      },
+      {
+        "corpus_id": "ICA_1872_SEC_73",
+        "provision_name": "Indian Contract Act, 1872 Section 73",
+        "relevance": "Governs compensation for loss or damage caused by breach of contract, limiting recovery to actual losses rather than arbitrary penalties."
+      },
+      {
+        "corpus_id": "LSAA_1987_SEC_19",
+        "provision_name": "Legal Services Authorities Act, 1987 Section 19",
+        "relevance": "Provides for organizing Lok Adalats to arrive at a pre-litigation settlement or compromise."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Exact amount of fees paid",
+      "Whether any classes or materials were actually availed"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

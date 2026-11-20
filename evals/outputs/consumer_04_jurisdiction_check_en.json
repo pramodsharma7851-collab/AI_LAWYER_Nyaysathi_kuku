@@ -1,0 +1,80 @@
+{
+  "test_id": "consumer_04_jurisdiction_check_en",
+  "domain": "consumer",
+  "language": "English",
+  "input_type": "clean",
+  "query": "Where do I file a consumer complaint for a dispute worth Rs. 15 Lakhs against a car dealer in Noida?",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "CPA_2019_SEC_34",
+    "CPA_2019_SEC_35",
+    "CPA_2019_SEC_69",
+    "LSAA_1987_SEC_12"
+  ],
+  "execution_time_sec": 3.061,
+  "model_output": {
+    "summary": "For your consumer dispute of Rs. 15 Lakhs against a car dealer in Noida, you can file a complaint before the District Consumer Commission. Since the amount is up to Rs. 50 Lakhs, the District Commission has the proper pecuniary jurisdiction. You can file this complaint online through the e-Daakhil portal or in person within two years from when the issue started.",
+    "facts_extracted": [
+      "Dispute is against a car dealer in Noida.",
+      "Dispute value is Rs. 15 Lakhs."
+    ],
+    "options": [
+      {
+        "title": "File Consumer Complaint Online via e-Daakhil",
+        "description": "Submit your complaint online along with purchase receipts and documents through the official e-Daakhil portal.",
+        "pros": [
+          "Can be done from home",
+          "Transparent tracking"
+        ],
+        "cons": [
+          "Requires scanning all documents and proper online submission"
+        ],
+        "estimated_timeframe": "1 to 2 weeks for initial review",
+        "forum": "e-Daakhil Portal (edaakhil.nic.in)"
+      },
+      {
+        "title": "File Consumer Complaint in Person or by Post",
+        "description": "Submit your written complaint directly to the District Consumer Commission having jurisdiction where you reside or where the dealer operates.",
+        "pros": [
+          "Direct interaction with the filing registry"
+        ],
+        "cons": [
+          "Requires physical visits"
+        ],
+        "estimated_timeframe": "1 to 2 weeks for initial filing",
+        "forum": "District Consumer Commission"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "CPA_2019_SEC_34",
+        "provision_name": "Consumer Protection Act, 2019 Section 34",
+        "relevance": "Establishes that the District Consumer Commission has jurisdiction for disputes where the value does not exceed Rs. 50 Lakhs."
+      },
+      {
+        "corpus_id": "CPA_2019_SEC_35",
+        "provision_name": "Consumer Protection Act, 2019 Section 35",
+        "relevance": "Explains the manner of filing a complaint electronically or physically."
+      },
+      {
+        "corpus_id": "CPA_2019_SEC_69",
+        "provision_name": "Consumer Protection Act, 2019 Section 69",
+        "relevance": "Mandates that a complaint must be filed within two years from the date the cause of action arose."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Date when the cause of action arose (to verify the 2-year limitation period)",
+      "Whether any prior written notice was given to the car dealer"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

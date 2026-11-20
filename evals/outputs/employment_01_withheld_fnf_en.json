@@ -1,0 +1,69 @@
+{
+  "test_id": "employment_01_withheld_fnf_en",
+  "domain": "employment",
+  "language": "English",
+  "input_type": "clean",
+  "query": "I worked as an accountant for 3 years. Resigned with full 30 days notice. The employer has withheld my last 2 months salary and full and final settlement for 60 days.",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "IDA_1947_SEC_2A",
+    "LSAA_1987_SEC_19",
+    "PWA_1936_SEC_3",
+    "PWA_1936_SEC_5"
+  ],
+  "execution_time_sec": 7.492,
+  "model_output": {
+    "summary": "Your employer has withheld your salary for the last 2 months and your full and final settlement for 60 days after you resigned with proper notice. Under the Payment of Wages Act, employers are responsible for paying wages on time, and wages must be paid promptly after termination.",
+    "facts_extracted": [
+      "Worked as an accountant for 3 years",
+      "Resigned with full 30 days notice",
+      "Employer withheld last 2 months salary",
+      "Full and final settlement withheld for 60 days"
+    ],
+    "options": [
+      {
+        "title": "Contact District Legal Services Authority (DLSA)",
+        "description": "Approach your local DLSA or call NALSA Helpline 15100 to seek free legal aid or to explore settlement through Lok Adalat.",
+        "pros": [
+          "Free legal assistance",
+          "Lok Adalat awards are final and binding"
+        ],
+        "cons": [
+          "Depends on the cooperation of the employer in settlement"
+        ],
+        "estimated_timeframe": "1 to 4 weeks",
+        "forum": "District Legal Services Authority (DLSA)"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "PWA_1936_SEC_3",
+        "provision_name": "Payment of Wages Act, 1936, Section 3",
+        "relevance": "Establishes that the employer is fully responsible for making timely wage payments to employed persons."
+      },
+      {
+        "corpus_id": "PWA_1936_SEC_5",
+        "provision_name": "Payment of Wages Act, 1936, Section 5",
+        "relevance": "Governs the timeline for payment of wages and final settlement upon termination of employment."
+      },
+      {
+        "corpus_id": "LSAA_1987_SEC_19",
+        "provision_name": "Legal Services Authorities Act, 1987, Section 19",
+        "relevance": "Allows for the organization of Lok Adalats to help settle pre-litigation disputes without court fees."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Exact written terms of the employment contract regarding notice period and settlement timelines"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

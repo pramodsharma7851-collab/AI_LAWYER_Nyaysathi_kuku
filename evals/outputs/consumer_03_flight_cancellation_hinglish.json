@@ -1,0 +1,83 @@
+{
+  "test_id": "consumer_03_flight_cancellation_hinglish",
+  "domain": "consumer",
+  "language": "Hinglish",
+  "input_type": "messy_emotional",
+  "query": "Airline ne flight cancel kar di aur 4 mahine se mera 18000 ka refund nahi diya. Customer care phone cut kar deta hai.",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "CPA_2019_SEC_2_11",
+    "CPA_2019_SEC_2_47",
+    "CPA_2019_SEC_2_7",
+    "CPA_2019_SEC_39"
+  ],
+  "execution_time_sec": 3.68,
+  "model_output": {
+    "summary": "Airline ne aapki flight cancel kar di aur 4 mahine se 18,000 rupaye ka refund nahi diya hai, aur customer care bhi phone kaat deta hai. Yeh services mein kami (Deficiency in Service) ke antargat aata hai aur aap Consumer Forum mein shikayat darj kar sakte hain.",
+    "facts_extracted": [
+      "Airline ne flight cancel kar di",
+      "4 mahine se 18,000 rupaye ka refund pending hai",
+      "Customer care se koi sahayata nahi mil rahi aur phone kaat diya jata hai"
+    ],
+    "options": [
+      {
+        "title": "Consumer Helpline par Complaint Darj Karein",
+        "description": "Aap National Consumer Helpline (NCH) portal ya app par jaakar airline ke khilaf unfair trade practice aur service mein kami ki shikaayat darj kar sakte hain.",
+        "pros": [
+          "Muft aur aasan tarika hai",
+          "Ghar baithe online ho jata hai"
+        ],
+        "cons": [
+          "Thoda samay lag sakta hai",
+          "Airline ke response par nirbhar hai"
+        ],
+        "estimated_timeframe": "2 se 4 hafte",
+        "forum": "National Consumer Helpline (NCH / Infoline)"
+      },
+      {
+        "title": "District Consumer Commission mein Case File Karein",
+        "description": "Agar airline refund na de, toh aap Consumer Protection Act ke tahat District Commission mein refund aur mental agony ke liye compensation ki maang kar sakte hain.",
+        "pros": [
+          "Kanooni taur par paisa aur compensation wapas milne ki strong sambhavna",
+          "Deficiency in service aur refund ke liye pakka forum"
+        ],
+        "cons": [
+          "Thodi kanooni prakriya aur samay lag sakta hai"
+        ],
+        "estimated_timeframe": "3 se 6 mahine",
+        "forum": "District Consumer Disputes Redressal Commission"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "CPA_2019_SEC_2_7",
+        "provision_name": "Consumer Protection Act, 2019 Section 2(7)",
+        "relevance": "Kyunki aapne airline ki service ke liye paise diye the, isliye aap 'Consumer' ki paribhasha mein aate hain."
+      },
+      {
+        "corpus_id": "CPA_2019_SEC_2_11",
+        "provision_name": "Consumer Protection Act, 2019 Section 2(11)",
+        "relevance": "Airline dwara refund na dena aur customer care ka phone kaatna 'Deficiency in Service' (seva mein kami) hai."
+      },
+      {
+        "corpus_id": "CPA_2019_SEC_39",
+        "provision_name": "Consumer Protection Act, 2019 Section 39",
+        "relevance": "District Commission ko yeh adhikaar hai ki woh aapka paisa byaaj sahit wapas dilaye aur nuksan ya pareshani ke liye compensation de."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Booking reference number ya PNR number",
+      "Payment ki raseed (receipt)"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

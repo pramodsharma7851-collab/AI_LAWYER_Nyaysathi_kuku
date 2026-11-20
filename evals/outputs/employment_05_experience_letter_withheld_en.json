@@ -1,0 +1,63 @@
+{
+  "test_id": "employment_05_experience_letter_withheld_en",
+  "domain": "employment",
+  "language": "English",
+  "input_type": "messy_emotional",
+  "query": "Employer is refusing to issue my experience letter and relieving letter unless I forfeit my pending salary of Rs. 40,000.",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "ICA_1872_SEC_27",
+    "ICA_1872_SEC_74",
+    "LSAA_1987_SEC_19",
+    "PWA_1936_SEC_3"
+  ],
+  "execution_time_sec": 4.507,
+  "model_output": {
+    "summary": "Your employer is wrongfully withholding your pending salary of Rs. 40,000 to force you to give up your experience and relieving letters. Employers are responsible for paying all wages owed under the law, and using your salary as a penalty or leverage is illegal.",
+    "facts_extracted": [
+      "Employer refused to issue experience and relieving letters",
+      "Employer demanded forfeiture of pending salary of Rs. 40,000"
+    ],
+    "options": [
+      {
+        "title": "Contact District Legal Services Authority (DLSA)",
+        "description": "Reach out to your local DLSA or call the NALSA helpline (15100) for free legal guidance and help in resolving wage and employment disputes, potentially through a Lok Adalat.",
+        "pros": [
+          "Free legal advice",
+          "Assistance from experienced advocates"
+        ],
+        "cons": [
+          "May take time to schedule sessions"
+        ],
+        "estimated_timeframe": "1 to 3 weeks",
+        "forum": "District Legal Services Authority (DLSA) / Helpline 15100"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "PWA_1936_SEC_3",
+        "provision_name": "Payment of Wages Act, 1936, Section 3",
+        "relevance": "Makes the employer directly responsible for the payment of all wages required to be paid to the employee."
+      },
+      {
+        "corpus_id": "LSAA_1987_SEC_19",
+        "provision_name": "Legal Services Authorities Act, 1987, Section 19",
+        "relevance": "Enables the organization of Lok Adalats to help arrive at a settlement for pre-litigation disputes with zero court fees."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": true,
+    "lawyer_reason": "You need an advocate or support from the District Legal Services Authority to issue a formal legal notice for recovering your unpaid wages and securing your employment documents.",
+    "missing_info": [
+      "Employment agreement or appointment letter details",
+      "Written proof of the employer's refusal to pay salary and issue letters"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

@@ -1,0 +1,61 @@
+{
+  "test_id": "employment_08_delayed_salary_hi",
+  "domain": "employment",
+  "language": "Hindi (हिन्दी)",
+  "input_type": "clean",
+  "query": "हर महीने सैलरी 25 या 30 तारीख को देते हैं, क्या 7 या 10 तारीख तक सैलरी देने का कोई सरकारी कानून है?",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "PWA_1936_SEC_15",
+    "PWA_1936_SEC_3",
+    "PWA_1936_SEC_5",
+    "PWA_1936_SEC_7"
+  ],
+  "execution_time_sec": 19.614,
+  "model_output": {
+    "summary": "हाँ, कानून के मुताबिक सैलरी देने की समय-सीमा तय है। Payment of Wages Act के तहत सैलरी महीने का वेतन चक्र खत्म होने के 7 या 10 दिन के अंदर मिल जानी चाहिए, न कि 25 या 30 तारीख को।",
+    "facts_extracted": [
+      "नियोक्ता (employer) हर महीने की 25 या 30 तारीख को सैलरी दे रहा है।",
+      "कर्मचारी जानना चाहता है कि क्या 7 या 10 तारीख तक सैलरी देने का कोई सरकारी कानून है।"
+    ],
+    "options": [
+      {
+        "title": "लेबर कमिश्नर से संपर्क करें (Labour Commissioner)",
+        "description": "सैलरी मिलने में देरी होने पर आप Payment of Wages Act के सेक्शन 15 के तहत अप्वाइंटेड अथॉरिटी के पास शिकायत दर्ज करा सकते हैं।",
+        "pros": [
+          "कानूनी रूप से देरी से मिलने वाली सैलरी और मुआवजे की मांग की जा सकती है।"
+        ],
+        "cons": [
+          "इसमें समय लग सकता है और नियोक्ता के साथ संबंध प्रभावित हो सकते हैं।"
+        ],
+        "estimated_timeframe": "कुछ हफ्ते से कुछ महीने",
+        "forum": "Labour Commissioner Office"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "PWA_1936_SEC_5",
+        "provision_name": "Payment of Wages Act, 1936 - Section 5",
+        "relevance": "यह धारा बताती है कि मजदूरी (वेतन अवधि समाप्त होने के बाद) 7वें या 10वें दिन की समाप्ति से पहले भुगतान की जानी चाहिए।"
+      },
+      {
+        "corpus_id": "PWA_1936_SEC_15",
+        "provision_name": "Payment of Wages Act, 1936 - Section 15",
+        "relevance": "यह धारा वेतन के भुगतान में देरी या अवैध कटौती के खिलाफ लेबर कमिश्नर के पास दावा करने की अनुमति देती है।"
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "आपकी कंपनी किस प्रकार के प्रतिष्ठान (establishment) में आती है और आपका वेतन चक्र (wage period) क्या है।"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

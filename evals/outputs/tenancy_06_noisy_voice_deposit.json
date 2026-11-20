@@ -1,0 +1,72 @@
+{
+  "test_id": "tenancy_06_noisy_voice_deposit",
+  "domain": "tenancy",
+  "language": "English",
+  "input_type": "noisy_voice",
+  "query": "uh hello yes um landlord sir not giving my forty thousand rupee deposit back saying keys handed over late uh what do i do",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "ICA_1872_SEC_74",
+    "LSAA_1987_SEC_12",
+    "MTA_2021_SEC_11",
+    "TPA_1882_SEC_108_B"
+  ],
+  "execution_time_sec": 2.818,
+  "model_output": {
+    "summary": "Your landlord is withholding your Rs. 40,000 security deposit claiming the keys were returned late. Under the law, the security deposit must be refunded when you hand back vacant possession, after deducting only legitimate amounts for unpaid rent or real damage.",
+    "facts_extracted": [
+      "Security deposit amount is Rs. 40,000",
+      "Landlord is withholding the deposit",
+      "Landlord cites late key handover as the reason"
+    ],
+    "options": [
+      {
+        "title": "Talk to Landlord and Show Legal Rules",
+        "description": "Politely remind the landlord that as per rental rules, deposits must be returned upon handing over possession, and only deductions for actual unpaid bills or property damage are allowed.",
+        "pros": [
+          "Saves time and money",
+          "Quickest way to get money back"
+        ],
+        "cons": [
+          "May not work if the landlord is uncooperative"
+        ],
+        "estimated_timeframe": "1-3 days",
+        "forum": null
+      },
+      {
+        "title": "Contact District Legal Services Authority (DLSA)",
+        "description": "Approach your local DLSA or call the NALSA Helpline (15100) for free guidance and assistance regarding your deposit dispute.",
+        "pros": [
+          "Free or low-cost help",
+          "Official intervention"
+        ],
+        "cons": [
+          "Can take some time"
+        ],
+        "estimated_timeframe": "1-2 weeks",
+        "forum": "District Legal Services Authority (DLSA)"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "MTA_2021_SEC_11",
+        "provision_name": "Model Tenancy Act, 2021 Section 11",
+        "relevance": "States that the security deposit must be refunded on the date of taking over vacant possession, allowing only legitimate deductions for unpaid rent or damage."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Was there a written rental agreement specifying any late penalty terms?",
+      "How many days late were the keys handed over?"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

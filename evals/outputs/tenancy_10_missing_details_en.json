@@ -1,0 +1,53 @@
+{
+  "test_id": "tenancy_10_missing_details_en",
+  "domain": "tenancy",
+  "language": "English",
+  "input_type": "missing_info",
+  "query": "Landlord took money and won't give it back.",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "MTA_2021_SEC_20",
+    "MTA_2021_SEC_21",
+    "TPA_1882_SEC_108_B",
+    "TPA_1882_SEC_108_M"
+  ],
+  "execution_time_sec": 2.25,
+  "model_output": {
+    "summary": "Your landlord has taken your money and is refusing to return it. Because the provided laws do not directly cover the return of security deposits or advance money, we cannot fully resolve your monetary dispute with the current provisions. You should consult a lawyer or contact the DLSA/NALSA helpline for guidance.",
+    "facts_extracted": [
+      "Landlord took money from the user",
+      "Landlord is refusing to give the money back"
+    ],
+    "options": [
+      {
+        "title": "Contact Legal Aid (DLSA / NALSA)",
+        "description": "Call the NALSA Helpline at 15100 or visit your local District Legal Services Authority to get free legal advice about recovering your money.",
+        "pros": [
+          "Free or low-cost guidance",
+          "Expert help from legal professionals"
+        ],
+        "cons": [
+          "May require waiting for an appointment"
+        ],
+        "estimated_timeframe": "1 to 3 days",
+        "forum": "District Legal Services Authority (DLSA / NALSA Helpline 15100)"
+      }
+    ],
+    "citations": [],
+    "confidence": "low",
+    "needs_lawyer": true,
+    "lawyer_reason": "The verified authority does not adequately cover the situation of recovering money from a landlord, as the provided sections only address possession, condition of property, written agreements, and eviction.",
+    "missing_info": [
+      "Whether there is a written tenancy agreement",
+      "The exact amount of money paid and its purpose (e.g., security deposit vs. advance rent)",
+      "Any receipts or proof of payment given to the landlord"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

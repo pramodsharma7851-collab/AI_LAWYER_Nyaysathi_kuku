@@ -1,0 +1,64 @@
+{
+  "test_id": "employment_06_noisy_voice_wages",
+  "domain": "employment",
+  "language": "English",
+  "input_type": "noisy_voice",
+  "query": "uh supervisor not paying my overtime wages since three months saying no budget available uh what labour office to go",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "IDA_1947_SEC_25F",
+    "LIMIT_1963_ART_113",
+    "PWA_1936_SEC_15",
+    "PWA_1936_SEC_3"
+  ],
+  "execution_time_sec": 2.959,
+  "model_output": {
+    "summary": "Your supervisor has not paid your overtime wages for the past three months, using a lack of budget as the reason. Under the law, employers are responsible for paying all wages on time. You can approach the Labour Commissioner's office to file a claim for your delayed wages.",
+    "facts_extracted": [
+      "Employer has not paid overtime wages for three months",
+      "Reason given by supervisor is no budget available",
+      "Employee is seeking which labour office to visit"
+    ],
+    "options": [
+      {
+        "title": "File a Claim at the Labour Office",
+        "description": "You can file an application before the appointed Authority or Labour Commissioner to claim your delayed wages.",
+        "pros": [
+          "Official process to recover unpaid wages",
+          "Authority can order payment of delayed wages along with compensation"
+        ],
+        "cons": [
+          "May take time to resolve through official channels"
+        ],
+        "estimated_timeframe": "1 to 3 months",
+        "forum": "Labour Commissioner Office / Payment of Wages Authority"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "PWA_1936_SEC_3",
+        "provision_name": "Payment of Wages Act, 1936 - Section 3",
+        "relevance": "States that every employer is responsible for paying all wages required to be paid to the employed persons."
+      },
+      {
+        "corpus_id": "PWA_1936_SEC_15",
+        "provision_name": "Payment of Wages Act, 1936 - Section 15",
+        "relevance": "Allows an employee whose wages are delayed to file an application before the Labour Commissioner to recover delayed wages and compensation."
+      }
+    ],
+    "confidence": "high",
+    "needs_lawyer": false,
+    "lawyer_reason": null,
+    "missing_info": [
+      "Name and location of the establishment",
+      "Exact amount of overtime wages due"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

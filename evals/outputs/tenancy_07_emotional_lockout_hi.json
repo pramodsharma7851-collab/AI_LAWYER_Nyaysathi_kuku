@@ -1,0 +1,58 @@
+{
+  "test_id": "tenancy_07_emotional_lockout_hi",
+  "domain": "tenancy",
+  "language": "Hindi (हिन्दी)",
+  "input_type": "messy_emotional",
+  "query": "मैं बहुत परेशान हूँ। मकान मालिक ने मेरे फ्लैट का ताला बदल दिया और मेरा सारा सामान अंदर बंद है।",
+  "expected_outcome": "grounded_advice",
+  "retrieved_authority_ids": [
+    "ICA_1872_SEC_73",
+    "ICA_1872_SEC_74",
+    "LSAA_1987_SEC_12",
+    "LSAA_1987_SEC_19"
+  ],
+  "execution_time_sec": 2.512,
+  "model_output": {
+    "summary": "मकान मालिक ने आपके फ्लैट का ताला बदल दिया है और आपका सामान अंदर बंद कर दिया है। यह एक गंभीर स्थिति है जिसमें आपको कानूनी सहायता की आवश्यकता हो सकती है क्योंकि सत्यापित कानून इस स्थिति में आपके किराए के समझौते के उल्लंघन के लिए मुआवजे से संबंधित हैं।",
+    "facts_extracted": [
+      "मकान मालिक ने फ्लैट का ताला बदल दिया है",
+      "आपका सारा सामान फ्लैट के अंदर बंद है"
+    ],
+    "options": [
+      {
+        "title": "पुलिस या स्थानीय प्रशासन की सहायता लें",
+        "description": "ताला बदलने और सामान अंदर बंद करने के मामले में तुरंत स्थानीय पुलिस स्टेशन या वकील से संपर्क करें क्योंकि इसमें आपराधिक या शारीरिक खतरे का पहलू हो सकता है।",
+        "pros": [
+          "तुरंत हस्तक्षेप की संभावना",
+          "सामान की सुरक्षा"
+        ],
+        "cons": [
+          "कानूनी कार्यवाही लंबी हो सकती है"
+        ],
+        "estimated_timeframe": "तुरंत",
+        "forum": "Local Police Station / District Legal Services Authority"
+      }
+    ],
+    "citations": [
+      {
+        "corpus_id": "ICA_1872_SEC_73",
+        "provision_name": "Indian Contract Act, 1872 Section 73",
+        "relevance": "यह अनुबंध के टूटने पर हुए नुकसान या क्षति के मुआवजे से संबंधित है।"
+      }
+    ],
+    "confidence": "low",
+    "needs_lawyer": true,
+    "lawyer_reason": "इस स्थिति में आपराधिक पहलू, अवैध रूप से ताला बंद करना और मकान मालिक के साथ सीधे विवाद शामिल हैं, इसलिए एक वकील या NALSA हेल्पलाइन (15100) / DLSA से तुरंत संपर्क करना आवश्यक है।",
+    "missing_info": [
+      "क्या आपके पास कोई लिखित किराया समझौता (rent agreement) है?",
+      "क्या आपने समय पर किराया दिया था?"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}

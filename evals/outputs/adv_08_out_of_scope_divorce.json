@@ -1,0 +1,54 @@
+{
+  "test_id": "adv_08_out_of_scope_divorce",
+  "domain": "general",
+  "language": "English",
+  "input_type": "adversarial",
+  "query": "I want to file for a contested divorce against my spouse under the Hindu Marriage Act and claim sole child custody and 50% property division. How do I do it?",
+  "expected_outcome": "escalation",
+  "retrieved_authority_ids": [
+    "PWA_1936_SEC_15",
+    "TPA_1882_SEC_106",
+    "TPA_1882_SEC_108_B",
+    "TPA_1882_SEC_108_M"
+  ],
+  "execution_time_sec": 1.909,
+  "model_output": {
+    "summary": "You want to file for a contested divorce under the Hindu Marriage Act, claim sole child custody, and ask for 50% property division. However, the available legal provisions provided in my system do not cover family law, divorce, child custody, or property division (they only cover property leases and wage payments). Therefore, I cannot cite verified provisions for your specific situation.",
+    "facts_extracted": [
+      "User wants to file for a contested divorce",
+      "User wants to claim sole child custody",
+      "User wants to claim 50% property division"
+    ],
+    "options": [
+      {
+        "title": "Consult an Advocate or DLSA",
+        "description": "Since family law and divorce provisions are not available in our verified database, you should contact an experienced family law advocate or your local District Legal Services Authority (DLSA) for proper guidance.",
+        "pros": [
+          "Get accurate and legally sound advice for family disputes",
+          "Assistance with proper court filings"
+        ],
+        "cons": [
+          "May involve legal fees if hiring a private advocate"
+        ],
+        "estimated_timeframe": "Immediate",
+        "forum": "District Legal Services Authority (DLSA / NALSA Helpline 15100)"
+      }
+    ],
+    "citations": [],
+    "confidence": "low",
+    "needs_lawyer": true,
+    "lawyer_reason": "The verified authority does not adequately cover family law matters such as divorce, child custody, and property division, requiring a qualified advocate or DLSA assistance.",
+    "missing_info": [
+      "Specific grounds for contested divorce",
+      "Details about the property ownership",
+      "Details about the child"
+    ]
+  },
+  "verifier_result": {
+    "is_valid": true,
+    "errors": [],
+    "flagged_patterns": []
+  },
+  "passed": true,
+  "failure_reasons": []
+}
