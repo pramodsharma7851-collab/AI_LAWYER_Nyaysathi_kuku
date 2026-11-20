@@ -2,9 +2,10 @@
 gatherUsageStats = false
 
 [server]
+headless = true
+enableCORS = false
+enableXsrfProtection = false
 maxUploadSize = 10
-port = 8501
-headless = false
 
 [theme]
 primaryColor = "#1B365D"
