@@ -1,21 +1,22 @@
-# Core AI & SDK
+# Core AI & LLM SDK
 google-genai>=0.1.1
 pydantic>=2.7.0
 python-dotenv>=1.0.1
 
-# Information Retrieval & Search
+# Information Retrieval & Lexical Search (RAG)
 rank-bm25>=0.2.2
 
-# Web UI & Frontend
+# Web UI & Multi-Page Frontend
 streamlit>=1.35.0
+watchdog>=4.0.0
 
-# Database & Storage
+# Database, State & Session Persistence
 sqlalchemy>=2.0.30
 
-# Document Export
+# Self-Help Document Drafter (PDF & DOCX Export)
 reportlab>=4.2.0
 python-docx>=1.1.2
 
-# Testing & Quality
+# Testing, Verification & Quality
 pytest>=8.2.0
 pytest-mock>=3.14.0
