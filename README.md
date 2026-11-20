@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ⚖️ NyayaSathi (न्यायसाथी)
 ### Production-Ready AI Legal Helper for Ordinary People in India
 
@@ -219,3 +220,6 @@ python evals/run_evals.py --live
 ├── LIMITATIONS.md              # Scope boundaries and known limitations
 └── Makefile                    # make check-env, run, test, live
 ```
+=======
+# AI_LAWYER_Nyaysathi_kuku
+>>>>>>> 573966de19dfc16b1928212fdaf764adfb1aff2e
